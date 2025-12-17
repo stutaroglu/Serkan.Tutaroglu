@@ -1,0 +1,31 @@
+{
+  "name": "yas-hesaplama",
+  "version": "1.0.0",
+  "description": "T.C. Adana 15. Noterliği yaş hesaplama aracı için tek tıklamalı masaüstü uygulama",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder --dir",
+    "build:win": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "tr.noteryas.hesaplama",
+    "productName": "YasHesaplama",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.js"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "29.4.0",
+    "electron-builder": "24.13.3"
+  }
+}
